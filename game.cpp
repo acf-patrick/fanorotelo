@@ -3,6 +3,7 @@
 #include "background.h"
 #include "shadowedText.h"
 #include "pawn.h"
+#include "logo.h"
 #include "base/widget.h"
 #include "base/timer.h"
 #include <ctime>
@@ -15,7 +16,10 @@ Game::Game() : App("Fanorona", 800, 550), turn(black) {
 
 	Piece::board = board;
 	Piece::game_turn = &turn;
-	other.add({ new Background, new ShadowedText("fanorona", 15, 15, 255, 255, 255) });
+	other.add({ 
+		new Background, new Logo,
+		new ShadowedText("fanorona", 15, 15, 255, 255, 255)
+	});
 	// other.add(new Fps(60, "Ubuntu-B"));
     for (int i=0; i<9; ++i)
 	{
