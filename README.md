@@ -13,5 +13,28 @@ g++ -c *.cpp base/*.cpp
 g++ *.o -lSDL -lSDL_ttf -lSDL_gfx -o fanorona
 ```
 
+# Architecture
+## Base API
+- App
+- Group
+- GameObject
+    - Text
+        - Fps
+    - __ button __
+        - Button
+            - Ok
+            - Cancel
+    - Confirm
+- Timer
+    - Chrono
+## Game API
+- App
+    - Game
+- GameObject 
+    - Background
+    - Piece
+    - ShadowedText
+
+___
 ## screenshot
 <img src="ss.png"/>
